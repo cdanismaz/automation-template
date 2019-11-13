@@ -10,5 +10,8 @@ public class Constants {
     public static class Credentials {
         public static final String VALID_USERNAME = "admin";
         public static final String VALID_PASSWORD = "admin";
+
+        public static final String INVALID_USERNAME = "test";
+        public static final String INVALID_PASSWORD = "test";
     }
 }

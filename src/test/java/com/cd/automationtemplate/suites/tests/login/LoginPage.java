@@ -24,9 +24,9 @@ public class LoginPage {
     @FindBy(css = "button[type='submit']")
     private WebElement submitButton;
 
-    protected void login() {
-        this.username.sendKeys(Constants.Credentials.VALID_USERNAME);
-        this.password.sendKeys(Constants.Credentials.VALID_PASSWORD);
+    protected void login(String username, String password) {
+        this.username.sendKeys(username);
+        this.password.sendKeys(password);
         this.submitButton.click();
     }
 
@@ -34,7 +34,12 @@ public class LoginPage {
         return this.driver.getCurrentUrl();
     }
 
-    public void close() {
+    protected void clearInput() {
+        this.username.clear();
+        this.password.clear();
+    }
+
+    protected void close() {
         this.driver.quit();
     }
 }
