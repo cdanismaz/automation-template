@@ -25,6 +25,7 @@ public class BaseWebAutomationTest extends BaseTest {
     @BeforeClass
     public void setupClass() {
         ChromeOptions options = new ChromeOptions();
+
         options.addArguments("no-sandbox");
         options.addArguments("start-maximized");
         options.addArguments("keep-alive-for-test");
