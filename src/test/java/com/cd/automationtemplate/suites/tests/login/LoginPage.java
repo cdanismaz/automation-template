@@ -23,8 +23,8 @@ public class LoginPage {
 
     @FindBy(css = "button[type='submit']")
     private WebElement submitButton;
-
-    @FindBy(css = "#contentArea > ng-component > div > form > div.centered > div > div")
+    
+    @FindBy(css = "div[class='error active']")
     private WebElement errorMessage;
 
     protected void login(String username, String password) {
