@@ -15,14 +15,17 @@ public class LoginPage {
         this.driver = driver;
     }
 
-    @FindBy(name = "username")
+    @FindBy(id = "clr-form-control-1")
     private WebElement username;
 
-    @FindBy(name = "password")
+    @FindBy(id = "clr-form-control-2")
     private WebElement password;
 
     @FindBy(css = "button[type='submit']")
     private WebElement submitButton;
+
+    @FindBy(css = "#contentArea > ng-component > div > form > div.centered > div > div")
+    private WebElement errorMessage;
 
     protected void login(String username, String password) {
         this.username.sendKeys(username);
@@ -37,6 +40,10 @@ public class LoginPage {
     protected void clearInput() {
         this.username.clear();
         this.password.clear();
+    }
+
+    protected String errorMessageDisplayed() {
+        return this.errorMessage.getText();
     }
 
     protected void close() {

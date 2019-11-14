@@ -26,6 +26,9 @@ public class LoginTests extends BaseWebAutomationTest {
     @Test(priority = 0)
     public void invalidLoginTest() {
         this.loginPage.login(Constants.Credentials.INVALID_USERNAME, Constants.Credentials.INVALID_PASSWORD);
+        Wait.waitShort();
+        Assert.assertEquals(this.loginPage.errorMessageDisplayed(), "Invalid username or password.");
+        this.loginPage.clearInput();
     }
 
 
@@ -33,15 +36,16 @@ public class LoginTests extends BaseWebAutomationTest {
     @Test(priority = 1)
     public void blankUsernameLoginTest() {
         this.loginPage.login(" ", Constants.Credentials.VALID_PASSWORD);
+        Wait.waitShort();
+        Assert.assertEquals(this.loginPage.errorMessageDisplayed(), "Invalid username or password.");
+        this.loginPage.clearInput();
     }
 
     @Test(priority = 2)
     public void blankPasswordLoginTest() {
         this.loginPage.login(Constants.Credentials.VALID_USERNAME, " ");
-    }
-
-    @AfterMethod
-    public void clearInputs() {
+        Wait.waitShort();
+        Assert.assertEquals(this.loginPage.errorMessageDisplayed(), "Invalid username or password.");
         this.loginPage.clearInput();
     }
 
