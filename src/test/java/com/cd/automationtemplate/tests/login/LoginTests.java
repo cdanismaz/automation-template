@@ -1,20 +1,12 @@
-package com.cd.automationtemplate.suites.tests.login;
+package com.cd.automationtemplate.tests.login;
 
-import com.cd.automationtemplate.suites.config.Constants;
-import com.cd.automationtemplate.suites.tests.BaseWebAutomationTest;
-import com.cd.automationtemplate.suites.utils.Wait;
+import com.cd.automationtemplate.config.Constants;
+import com.cd.automationtemplate.tests.BaseWebAutomationTest;
+import com.cd.automationtemplate.utils.Wait;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class LoginTests extends BaseWebAutomationTest {
-
-    @BeforeClass
-    public void initialization() {
-        //LoginPage loginPage = new LoginPage(driver);
-    }
 
     @Test(priority = 3)
     public void validLoginTest() {
@@ -47,10 +39,5 @@ public class LoginTests extends BaseWebAutomationTest {
         Wait.waitShort();
         Assert.assertEquals(this.loginPage.errorMessageDisplayed(), "Invalid username or password.");
         this.loginPage.clearInput();
-    }
-
-    @AfterClass
-    public void tearDown() {
-        this.loginPage.close();
     }
 }

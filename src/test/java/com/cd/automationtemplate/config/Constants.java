@@ -1,4 +1,4 @@
-package com.cd.automationtemplate.suites.config;
+package com.cd.automationtemplate.config;
 
 public class Constants {
 

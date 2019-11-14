@@ -1,4 +1,4 @@
-package com.cd.automationtemplate.suites.utils;
+package com.cd.automationtemplate.utils;
 
 public class Wait {
     public static void waitShort() {

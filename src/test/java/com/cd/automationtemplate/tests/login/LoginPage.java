@@ -1,11 +1,8 @@
-package com.cd.automationtemplate.suites.tests.login;
+package com.cd.automationtemplate.tests.login;
 
-import com.cd.automationtemplate.suites.config.Constants;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import java.net.URL;
 
 public class LoginPage {
 
@@ -23,7 +20,7 @@ public class LoginPage {
 
     @FindBy(css = "button[type='submit']")
     private WebElement submitButton;
-    
+
     @FindBy(css = "div[class='error active']")
     private WebElement errorMessage;
 

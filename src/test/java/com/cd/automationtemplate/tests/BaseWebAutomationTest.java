@@ -1,8 +1,8 @@
-package com.cd.automationtemplate.suites.tests;
+package com.cd.automationtemplate.tests;
 
-import com.cd.automationtemplate.suites.config.Constants;
-import com.cd.automationtemplate.suites.tests.login.LoginPage;
-import com.cd.automationtemplate.suites.utils.Wait;
+import com.cd.automationtemplate.config.Constants;
+import com.cd.automationtemplate.tests.login.LoginPage;
+import com.cd.automationtemplate.utils.Wait;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

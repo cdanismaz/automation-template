@@ -1,4 +1,4 @@
-package com.cd.automationtemplate.suites.utils;
+package com.cd.automationtemplate.utils;
 
 import java.io.IOException;
 import java.util.List;

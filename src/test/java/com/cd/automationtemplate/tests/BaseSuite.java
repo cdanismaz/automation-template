@@ -1,6 +1,6 @@
-package com.cd.automationtemplate.suites.tests;
+package com.cd.automationtemplate.tests;
 
-import com.cd.automationtemplate.suites.utils.PropertyManager;
+import com.cd.automationtemplate.utils.PropertyManager;
 import lombok.extern.slf4j.Slf4j;
 import org.testng.annotations.BeforeSuite;
 
