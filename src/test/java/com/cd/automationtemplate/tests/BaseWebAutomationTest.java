@@ -16,7 +16,6 @@ import org.testng.annotations.BeforeClass;
 
 import java.text.MessageFormat;
 
-
 @Slf4j
 public class BaseWebAutomationTest extends BaseTest {
     protected WebDriver driver;
@@ -59,7 +58,8 @@ public class BaseWebAutomationTest extends BaseTest {
 
     protected LoginPage navigateToLoginPage() {
         log.info("Navigating to login page");
-        this.driver.navigate().to(Constants.Urls.LOGIN_PAGE);
+        this.driver.navigate().to(Constants.Urls.getAbsoluteUrl(Constants.Urls.LOGIN_PAGE));
         return PageFactory.initElements(this.driver, LoginPage.class);
     }
+
 }

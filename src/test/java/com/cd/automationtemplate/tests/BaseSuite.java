@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.testng.annotations.BeforeSuite;
 
 import java.io.IOException;
+import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,9 +16,10 @@ public class BaseSuite {
     public void beforeSuite() throws IOException {
         log.info("Before suite started");
 
-        // read the APP_SELENIUM_DRIVER environment variable : The relative path to driver
-        final String driverRelativePath = System.getenv("APP_SELENIUM_DRIVER");
-
+        // read the APP_RUNTIME_OS environment variable. Possible values are : linux, mac, windows
+        final String os = System.getenv("APP_RUNTIME_OS");
+        final String driverRelativePath = MessageFormat.format("drivers/{0}/chromedriver",os);
+        
         // Convert the relative path to full path (absolute path)
         String driverPath = Thread.currentThread().getContextClassLoader().getResource(driverRelativePath).getPath();
 
