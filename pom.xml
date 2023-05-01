@@ -13,7 +13,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <selenium.version>3.141.59</selenium.version>
-        <testng.version>7.0.0</testng.version>
+        <testng.version>7.7.0</testng.version>
         <lombok.version>1.18.10</lombok.version>
     </properties>
 
